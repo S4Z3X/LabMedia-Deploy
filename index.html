@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabMedia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Список пользователей</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Поиск по имени или e-mail" onkeypress="handleSearch(event)">
+            <button onclick="clearFilter()">Очистить фильтр</button>
+        </div>
+        <div class="sort-buttons">
+            <span class="sort-label">Сортировка: </span>
+            <button class="sort-button" onclick="sortByDate()" id="sortByDate">Дата регистрации</button>
+            <button class="sort-button" onclick="sortByRating()" id="sortByRating">Рейтинг</button>
+        </div>
+        <table class="user-list">
+            <thead>
+                <tr>
+                    <th>Имя пользователя</th>
+                    <th>E-mail</th>
+                    <th>Дата регистрации</th>
+                    <th>Рейтинг</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="userList"></tbody>
+        </table>
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
